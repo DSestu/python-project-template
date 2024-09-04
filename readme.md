@@ -1,6 +1,23 @@
-## Python Project Template 🚀
+# Python Project Template 🚀
 
-A cutting-edge Python project template has been designed. This repository aims to make the development experience smooth, efficient, and consistent across different machines and time periods.
+A Python project template has been designed. This repository aims to make the development experience smooth, efficient, and consistent across different machines and time periods.
+
+- [Python Project Template 🚀](#python-project-template-)
+  - [Introduction 🌟](#introduction-)
+  - [Core Technologies 🛠️](#core-technologies-️)
+  - [Key Features ✨](#key-features-)
+  - [Getting Started 🚀](#getting-started-)
+    - [Setup `devenv` \& `direnv`](#setup-devenv--direnv)
+  - [Notes](#notes)
+    - [Multiple ways to use the environment](#multiple-ways-to-use-the-environment)
+    - [Integrated devenv commands](#integrated-devenv-commands)
+    - [Python environment management 💡](#python-environment-management-)
+      - [Adding/removing packages](#addingremoving-packages)
+      - [Environment synchronization](#environment-synchronization)
+    - [Act](#act)
+      - [VM Size](#vm-size)
+  - [License 📜](#license-)
+
 
 ## Introduction 🌟
 
@@ -25,8 +42,7 @@ The following technologies are leveraged:
 - **Local GitHub Actions** 🚀: Workflows can be tested before pushing with `act`
 - **Testing Suite** 🧪: Preconfigured with Pytest and GitHub Actions
 - **Code Formatting** 🧹: Code cleanliness is maintained with Ruff
-
-# Instructions
+- **Automatic pre-commit linting** 🔗: Various pre-commit hooks automatically installed
 
 ## Getting Started 🚀
 
@@ -35,7 +51,7 @@ The following technologies are leveraged:
 3. Enter the project directory
 4. The environment will be set up automatically
 
-## Setup `devenv` & `direnv`
+### Setup `devenv` & `direnv`
 
 You will need `devenv`, and optionally *(but recommended)* `direnv` for automatic environment activation upon entering the project directory.
 
@@ -56,9 +72,63 @@ export PATH=$HOME/.nix-profile/bin:$PATH
 eval "$(direnv hook zsh)"
 ```
 
-# Notes
+## Notes
 
-## Python environment management 💡
+### Multiple ways to use the environment
+
+1. From devenv/direnv
+
+If the environment is activated with devenv/direnv, the **environment is activated automatically**.
+
+In case you don't have direnv, you can activate the environment manually with:
+
+```bash
+devenv shell
+```
+
+You can launch the same script as the container would be by running:
+
+```bash
+start
+```
+
+2. From the container
+
+The devenv environment has also an embedded container runtime *(colima)* and docker.
+
+> **The container starts with the `./start.sh` script.**
+
+You can start the container with:
+
+```bash
+docker compose up
+```
+
+3. Without devenv or docker
+
+The more manual approach is to activate the python environement manually.
+
+In this case, you won't benefit from the devev commands that are explained in the next section.
+
+```bash
+# Make sure the virtual environment exists
+uv venv
+# Activate it
+source .venv/bin/activate
+# Syncronize packages
+uv sync
+```
+
+### Integrated devenv commands
+
+- start: run the ./start.sh script that is also launched when the container is started
+- prune: remove the python environment, reinstall it from scratch, activates it, and install precommit hooks
+- lint: run precommit hooks on all files
+- gdiff: print rich git diff in terminal
+- test: run pytest
+- itest: run integration tests
+
+### Python environment management 💡
 
 The tool used to manage the Python environment is `uv`.
 
@@ -66,7 +136,7 @@ The documentation can be found here: [https://docs.astral.sh/uv/](https://docs.a
 
 Python version, alongside the packages, are defined in the `pyproject.toml` file.
 
-### Adding/removing packages
+#### Adding/removing packages
 
 In order to add/remove a package, you will need to run the following command:
 
@@ -84,7 +154,7 @@ pip install fastapi[standard]
 uv add fastapi --extra standard
 ```
 
-### Environment synchronization
+#### Environment synchronization
 
 > **Note** This is done automatically when the devenv environment is activated.
 
@@ -105,11 +175,11 @@ uv sync --all-extras
 python -m my_script
 ```
 
-## Act
+### Act
 
 Act is a tool to run GitHub Actions locally in a compact virtual machine.
 
-### VM Size
+#### VM Size
 
 The first time that `act` is run, it will ask you the size of the virtual machine used.
 
