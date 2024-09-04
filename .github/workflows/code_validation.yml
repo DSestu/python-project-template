@@ -20,7 +20,7 @@ jobs:
       - name: Restore uv cache
         uses: actions/cache@v4
         with:
-          path: $UV_CACHE_DIR
+          path: /tmp/.uv_cache
           key: uv-${{ runner.os }}-${{ hashFiles('uv.lock') }}
           restore-keys: |
             uv-${{ runner.os }}-${{ hashFiles('uv.lock') }}
