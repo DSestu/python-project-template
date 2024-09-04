@@ -1,10 +1,7 @@
 name: Code validation (Lint & Test)
 
 on:
-  workflow_call:
-    secrets:
-      OLYMPE_4_DEMETER:
-        required: true
+  pull_request:
 
 jobs:
   code_validation:

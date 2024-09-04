@@ -120,14 +120,3 @@ The first time that `act` is run, it will ask you the size of the virtual machin
 ## License 📜
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Happy coding! 🎉 Remember, with great power comes great responsibility... to write awesome code! 💻✨
-# Setup
-
-sh <(curl -L https://nixos.org/nix/install) --no-daemon
-nix-env -iA devenv -f https://github.com/NixOS/nixpkgs/tarball/nixpkgs-unstable
-nix-env -i direnv
-
-devenv init
