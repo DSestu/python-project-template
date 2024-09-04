@@ -26,6 +26,9 @@ jobs:
             uv-${{ runner.os }}-${{ hashFiles('uv.lock') }}
             uv-${{ runner.os }}
 
+      - name: Debug
+        run: echo $(cwd) && echo $(ls -la)
+
       - name: "Set up Python"
         run: uv python install --python-preference only-managed # Will look at the pyproject.toml file
 
