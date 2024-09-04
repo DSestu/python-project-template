@@ -1,0 +1,15 @@
+name: Code validation (Lint & Test)
+
+on:
+  workflow_call:
+    secrets:
+      OLYMPE_4_DEMETER:
+        required: true
+
+jobs:
+  code_validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3

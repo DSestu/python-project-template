@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - 8008:8008
+    volumes:
+      - .:/environment
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: sh -c "chmod +x ./docker_start.sh && ./docker_start.sh"
