@@ -22,8 +22,8 @@ in
   '';
 
   # scripts.ci.exec = "act";
-  scripts.lint.exec = "ruff check . --fix && ruff format .";
-  scripts.prune.exec = "rm -rf .venv && uv venv && source .venv/bin/activate && uv sync --all-extras";
+  scripts.lint.exec = "pre-commit run --all-files";
+  scripts.prune.exec = "rm -rf .venv && uv venv && source .venv/bin/activate && uv sync --all-extras && pre-commit install";
   scripts.start.exec = "./start.sh";
   scripts.tests.exec = "pytest app/tests";
   scripts.itests.exec = "pytest app/tests_integration";
@@ -36,5 +36,6 @@ in
     export DOCKER_HOST=$(docker context inspect colima | jq -r '.[0].Endpoints.docker.Host') # Get the docker daemon socket for act
     source ./.venv/bin/activate
     uv sync --all-extras
+    pre-commit install
   '';
 }
