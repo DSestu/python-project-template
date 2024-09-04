@@ -7,7 +7,7 @@ A Python project template has been designed. This repository aims to make the de
   - [Core Technologies 🛠️](#core-technologies-️)
   - [Key Features ✨](#key-features-)
   - [Getting Started 🚀](#getting-started-)
-    - [Setup `devenv` \& `direnv`](#setup-devenv--direnv)
+    - [Setting up `devenv` \& `direnv` 🛠️](#setting-up-devenv--direnv-️)
   - [Notes](#notes)
     - [Multiple ways to use the environment](#multiple-ways-to-use-the-environment)
     - [Integrated devenv commands](#integrated-devenv-commands)
@@ -51,26 +51,33 @@ The following technologies are leveraged:
 3. Enter the project directory
 4. The environment will be set up automatically
 
-### Setup `devenv` & `direnv`
 
-You will need `devenv`, and optionally *(but recommended)* `direnv` for automatic environment activation upon entering the project directory.
+### Setting up `devenv` & `direnv` 🛠️
 
-* [**Devenv** installation](https://devenv.sh/getting-started/#installation)
+For this project, `devenv` is required, and `direnv` is highly recommended for automatic environment activation when entering the project directory. 🚀
+
+- [**Devenv** can be installed](https://devenv.sh/getting-started/#installation) following the official guide.
+
+To install `direnv`, the following command can be used:
 
 ```bash
 nix-env -i direnv
 ```
 
-* [**Direnv** installation](https://direnv.net/docs/installation.html)
+- [**Direnv** installation instructions](https://direnv.net/docs/installation.html) are available for various systems.
 
-* [**Direnv** hook installation](https://direnv.net/docs/hook.html)
+- [**Direnv** hook installation](https://direnv.net/docs/hook.html) is necessary for proper functionality.
 
-Add this at the end of your `.zshrc` file:
+To complete the setup, the following lines should be added to the end of your `.zshrc` file:
 
-```.zshrc
+.zshrc
+
+```bash
 export PATH=$HOME/.nix-profile/bin:$PATH
 eval "$(direnv hook zsh)"
 ```
+
+With these tools in place, your development environment will be ready to go! 🎉
 
 ## Notes
 
