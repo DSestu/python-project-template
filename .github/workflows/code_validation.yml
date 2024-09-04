@@ -9,6 +9,7 @@ jobs:
 
     env:
       UV_CACHE_DIR: /tmp/.uv_cache
+      UV_CONFIG_FILE: pyproject.toml
 
     steps:
       - name: Checkout
@@ -26,11 +27,8 @@ jobs:
             uv-${{ runner.os }}-${{ hashFiles('uv.lock') }}
             uv-${{ runner.os }}
 
-      - name: Debug
-        run: echo $(cwd) && echo $(ls -la)
-
       - name: "Set up Python"
-        run: uv python install --python-preference only-managed # Will look at the pyproject.toml file
+        run: uv python install # Will look at the pyproject.toml file
 
       - name: Install dependencies
         run: uv sync --all-extras
