@@ -6,7 +6,7 @@ in
 {
   packages = with pkgs; [
     colima # to provide a docker container runtimes
-    docker 
+    docker
     uv # for python environment management
     act # for running github actions locally
     jq # for json manipulation, required to parse the docker daemon socket to use act
@@ -22,11 +22,12 @@ in
   '';
 
   # scripts.ci.exec = "act";
-  scripts.lint.exec = "ruff check . --fix && ruff format .";
-  scripts.prune.exec = "rm -rf .venv && uv venv && source .venv/bin/activate && uv sync --all-extras";
+  scripts.lint.exec = "pre-commit run --all-files";
+  scripts.prune.exec = "rm -rf .venv && uv venv && source .venv/bin/activate && uv sync --all-extras && pre-commit install";
   scripts.start.exec = "./start.sh";
   scripts.tests.exec = "pytest app/tests";
   scripts.itests.exec = "pytest app/tests_integration";
+  scripts.gdiff.exec = "git diff | dunk | less -R";
 
   # unset PYTHONPATH is necessary to ensure that libraries solely from the virtual environment are used
   enterShell = ''
@@ -36,5 +37,6 @@ in
     export DOCKER_HOST=$(docker context inspect colima | jq -r '.[0].Endpoints.docker.Host') # Get the docker daemon socket for act
     source ./.venv/bin/activate
     uv sync --all-extras
+    pre-commit install
   '';
 }
