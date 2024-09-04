@@ -9,7 +9,6 @@ jobs:
 
     env:
       UV_CACHE_DIR: /tmp/.uv_cache
-      # UV_CONFIG_FILE: pyproject.toml
 
     steps:
       - name: Checkout

@@ -27,6 +27,7 @@ in
   scripts.start.exec = "./start.sh";
   scripts.tests.exec = "pytest app/tests";
   scripts.itests.exec = "pytest app/tests_integration";
+  scripts.gdiff.exec = "git diff | dunk | less -R";
 
   # unset PYTHONPATH is necessary to ensure that libraries solely from the virtual environment are used
   enterShell = ''
