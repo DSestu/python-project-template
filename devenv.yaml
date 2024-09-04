@@ -4,3 +4,4 @@ inputs:
   # pinned terraform to 1.5.7, because post 1.6 it's marked 'unfree' (BSL)
   nixpkgs-for-terraform:
     url: github:NixOS/nixpkgs?rev=4ab8a3de296914f3b631121e9ce3884f1d34e1e5
+

@@ -215,3 +215,6 @@ micromamba
 
 # Pre-commit hooks
 .pre-commit
+
+.ruff_cache
+.pytest_cache
