@@ -6,7 +6,7 @@ in
 {
   packages = with pkgs; [
     colima # to provide a docker container runtimes
-    docker 
+    docker
     uv # for python environment management
     act # for running github actions locally
     jq # for json manipulation, required to parse the docker daemon socket to use act

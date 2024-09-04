@@ -33,7 +33,7 @@ The following technologies are leveraged:
 1. Make sure you have `devenv` and `direnv` installed.
 2. Clone this repository
 3. Enter the project directory
-4. The environment will be set up automatically 
+4. The environment will be set up automatically
 
 ## Setup `devenv` & `direnv`
 
@@ -100,7 +100,7 @@ Environment synchronization is also performed when running a python script via u
 
 ```bash
 uv run python -m my_script
-# Is the same as 
+# Is the same as
 uv sync --all-extras
 python -m my_script
 ```
