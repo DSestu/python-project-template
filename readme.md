@@ -105,10 +105,10 @@ The devenv environment has also an embedded container runtime *(colima)* and doc
 
 > **The container starts with the `./start.sh` script.**
 
-You can start the container with:
+You can start the container runtime *(colima)* and the docker image with the following command:
 
 ```bash
-docker compose up
+docker_start
 ```
 
 3. Without devenv or docker

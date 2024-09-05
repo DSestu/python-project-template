@@ -5,11 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11,<3.12"
 dependencies = [
-    "dunk>=0.4.0a0",
     "fastapi[standard]>=0.112.2",
-    "pandas>=2.2.2",
     "pre-commit>=3.8.0",
-    # "pytest-watch>=4.2.0",
     "pytest>=8.3.2",
     "ruff>=0.6.3",
     "uvicorn>=0.30.6",
