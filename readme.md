@@ -48,9 +48,13 @@ The following technologies are leveraged:
 
 1. Make sure you have `devenv` and `direnv` installed.
 2. Clone this repository
+
+```bash
+git clone git@github.com:DSestu/python-project-template.git . && rm -rf .git && git init
+```
+
 3. Enter the project directory
 4. The environment will be set up automatically
-
 
 ### Setting up `devenv` & `direnv` 🛠️
 
