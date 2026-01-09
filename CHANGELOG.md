@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.4](https://github.com/DSestu/python-project-template/compare/v0.3.3...v0.3.4) (2026-01-09)
+
+
+### Miscellaneous Chores
+
+* update project metadata in pyproject.toml ([46ed9aa](https://github.com/DSestu/python-project-template/commit/46ed9aa3a8b29b743ad84216eead7c929c6ad7d5))
+* update project metadata in pyproject.toml ([#14](https://github.com/DSestu/python-project-template/issues/14)) ([0bb8e68](https://github.com/DSestu/python-project-template/commit/0bb8e686cd0fd91e4980c38052ed484833a2dcff))
+
 ## [0.3.3](https://github.com/DSestu/python-project-template/compare/v0.3.2...v0.3.3) (2026-01-09)
 
 
