@@ -15,7 +15,8 @@ in
   scripts.lint.exec = "pre-commit run --all-files";
   scripts.prune.exec = "rm -rf .venv && uv venv && source .venv/bin/activate && uv sync --all-extras && pre-commit install";
   scripts.start.exec = "./start.sh";
-  scripts.docker_start.exec = "colima start && export DOCKER_HOST=$(docker context inspect colima | jq -r '.[0].Endpoints.docker.Host') && docker compose up";
+  scripts.gactions.exec = "export DOCKER_HOST=$(docker context inspect colima | jq -r '.[0].Endpoints.docker.Host') && act";
+  scripts.docker_start.exec = "export DOCKER_HOST=$(docker context inspect colima | jq -r '.[0].Endpoints.docker.Host') && docker compose up";
   scripts.tests.exec = "pytest app/tests";
   scripts.itests.exec = "pytest app/tests_integration";
 
