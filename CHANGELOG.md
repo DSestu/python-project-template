@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.8](https://github.com/DSestu/python-project-template/compare/v0.3.7...v0.3.8) (2026-01-09)
+
+
+### Miscellaneous Chores
+
+* enhance release workflow to handle versioning and improve PyPI publishing steps ([72d1ae1](https://github.com/DSestu/python-project-template/commit/72d1ae169a09f3881e03085a5e480208fb8d652f))
+* enhance release workflow to handle versioning and improve PyPI publishing steps ([#24](https://github.com/DSestu/python-project-template/issues/24)) ([80db5f6](https://github.com/DSestu/python-project-template/commit/80db5f6f9237a249fd0c50241c9301e6eea0c966))
+
 ## [0.3.7](https://github.com/DSestu/python-project-template/compare/v0.3.6...v0.3.7) (2026-01-09)
 
 
