@@ -1,5 +1,5 @@
 {
-  "project_name": "Python Project Template",
+  "project_name": "python-project-template",
   "project_slug": "python-project-template",
   "project_description": "A Python project template with testing, development tools, and pre-commit hooks",
   "version": "0.1.0",
