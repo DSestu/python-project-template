@@ -74,7 +74,7 @@ uvx LOCAL_PATH/{{ cookiecutter.project_name }}
 * Repository name: {{ cookiecutter.project_name }}
 * Description: {{ cookiecutter.project_description }}
 
-Got to the local project:
+Get to the local project:
 
 ```bash
 git branch -M main
@@ -126,8 +126,8 @@ By following these steps, you'll enable automated publishing of your package to 
 To improve the default pull request workflow experience, update your repository's settings as follows:
 
 1. Go to your repository's **Settings**.
-2. In the sidebar, select **Pull Requests**.
-3. Scroll down to the **Default merge message** section.
-4. For both options, set the default message to **Pull request title**.
+2. Scroll down to the **Pull requests** section.
+3. Disable **Allow merge commits** & **Allow rebase merging**
+4. Keep **Allow squash merging**, and change the default commit message to **Pull request title**
 
-This will ensure your merge commits use clear, descriptive titles from pull requests instead of the default text.
+This will ensure your merge commits use clear, descriptive titles from pull requests instead of the default text, and keep changelogs concise.
