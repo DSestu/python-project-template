@@ -74,5 +74,15 @@ jobs:
           curl -LsSf https://astral.sh/uv/install.sh | sh
           echo "$HOME/.cargo/bin" >> $GITHUB_PATH
 
+      - name: Change package version
+        run: |
+          TAG="${{ needs.release-please.outputs.tag_name }}"
+          # Remove 'v' prefix if present
+          VERSION=${TAG#v}
+          uv version "$VERSION"
+
+      - name: Build wheels
+        run: uv build
+
       - name: Publish to PyPI
         run: uv publish
