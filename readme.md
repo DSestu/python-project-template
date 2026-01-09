@@ -26,8 +26,19 @@ Additional code validation, via pre-commits, are also included in the template.
 
 Automatic run of unit tests is also included.
 
+The cookiecutter run will also check if uv is installed on the system, and ask if the user wants to install it if not present.
+
+If the user has uv installed, this custom command is the one liner to create the template.
+
 ```bash
 uvx cookiecutter gh:DSestu/python-project-template
+```
+
+Otherwise, you can either install uv or use cookiecutter traditionnaly:
+
+```bash
+pip install cookiecutter
+cookiecutter gh:DSestu/python-project-template
 ```
 
 ## License 📜
