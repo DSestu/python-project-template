@@ -1,0 +1,12 @@
+---
+name: Prepare release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release-please:
+    uses: sencrop/github-workflows/.github/workflows/release-please-v1.yml@master
+    secrets: inherit
