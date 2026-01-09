@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.1](https://github.com/DSestu/python-project-template/compare/v0.3.0...v0.3.1) (2026-01-09)
+
+
+### Miscellaneous Chores
+
+* update dependencies and refine GitHub Actions workflows for wheel building and release ([1f07dda](https://github.com/DSestu/python-project-template/commit/1f07dda4998e7809b6e56b768aec5d8fdd6789dc))
+* update dependencies and refine GitHub Actions workflows for wheel building and release ([bafe077](https://github.com/DSestu/python-project-template/commit/bafe07723f41a033c8880000e50e6ae6b7d8f594))
+
 ## [0.3.0](https://github.com/DSestu/python-project-template/compare/v0.2.0...v0.3.0) (2026-01-09)
 
 
