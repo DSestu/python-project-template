@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0](https://github.com/DSestu/python-project-template/compare/v0.2.0...v0.3.0) (2026-01-09)
+
+
+### New features
+
+* Enhance GitHub Actions workflow to build and upload wheels after release creation ([d2596f4](https://github.com/DSestu/python-project-template/commit/d2596f4b00f45b3439888c6bf2df8a0086272094))
+* Enhance GitHub Actions workflow to build and upload wheels after release creation ([c55fb8d](https://github.com/DSestu/python-project-template/commit/c55fb8de07cca609256de5995e107e00d4f0e58e))
+
 ## [0.2.0](https://github.com/DSestu/python-project-template/compare/v0.1.1...v0.2.0) (2026-01-09)
 
 
