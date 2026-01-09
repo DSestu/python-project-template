@@ -3,9 +3,7 @@ repos:
     rev: v4.6.0
     hooks:
       - id: trailing-whitespace
-        exclude: ^\.github/workflows/
       - id: end-of-file-fixer
-        exclude: ^\.github/workflows/
       - id: check-added-large-files
       - id: detect-private-key
 
