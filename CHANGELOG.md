@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.3](https://github.com/DSestu/python-project-template/compare/v0.3.2...v0.3.3) (2026-01-09)
+
+
+### Miscellaneous Chores
+
+* simplify release-please configuration by removing version-file entry ([c13e664](https://github.com/DSestu/python-project-template/commit/c13e66449d09309d53444851475a05250fac7017))
+* simplify release-please configuration by removing version-file entry ([#12](https://github.com/DSestu/python-project-template/issues/12)) ([76193b9](https://github.com/DSestu/python-project-template/commit/76193b9167500060096a996219cfc57af5d6c8e7))
+
 ## [0.3.2](https://github.com/DSestu/python-project-template/compare/v0.3.1...v0.3.2) (2026-01-09)
 
 
