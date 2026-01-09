@@ -21,10 +21,10 @@ uvx cookiecutter gh:DSestu/python-project-template
 ## Release and Deployment Workflow
 
 - Uses the [release-please](https://github.com/googleapis/release-please) GitHub Action.
-  - Commits or PR merges to `master` automatically open a "release" pull request.
+  - PR merges to `master` automatically open a "release" pull request.
   - Versioning is inferred from commit titles using [Conventional Commits](https://www.conventionalcommits.org/).
   - The version is auto-incremented and checked by a dedicated GitHub Action.
-- Merging a release PR triggers:
+- Merging a release PR triggers:****
   - Creation of a new release.
   - Attachment of built binaries to the release.
   - Publication to PyPI.
@@ -40,7 +40,7 @@ Once published, your package becomes publicly available and can be executed remo
 
 The template checks if `uv` is installed before proceeding. If it isn't, you'll be prompted to install it.
 
-- **With `uv` installed, generate a new project using:**
+- **With `uv` installed, generate a new project using (<https://docs.astral.sh/uv/getting-started/installation/>):**
 
   ```bash
   uvx cookiecutter gh:DSestu/python-project-template
@@ -52,6 +52,10 @@ The template checks if `uv` is installed before proceeding. If it isn't, you'll 
   pip install cookiecutter
   cookiecutter gh:DSestu/python-project-template
   ```
+
+## Additional setup via Github UI and PyPi UI are required
+
+[Those are detailed in the template readme.]({{cookiecutter.project_name}}/README.md)
 
 ## License 📜
 
