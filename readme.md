@@ -8,12 +8,12 @@ uvx cookiecutter gh:DSestu/python-project-template
 
 ## Overview
 
-- **Goals:**  
+- **Goals:**
   - Enable fast creation of new tools as callable Python packages.
   - Ensure packages are easily installable and executable via `uvx`.
   - Deploy packages to PyPI with a main entrypoint out of the box.
 
-- **Key Features:**  
+- **Key Features:**
   - Packaging and environment managed with [uv](https://github.com/astral-sh/uv).
   - Project structure includes a minimal, ready-made CLI that prints "hello world" when invoked via `uvx`.
   - Automated packaging and deployment through GitHub Actions, triggered on new releases.

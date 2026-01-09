@@ -16,22 +16,22 @@ uvx {{ cookiecutter.project_name }}
 
 **✨ Key Features:**
 
-1. **Automatic Release Workflow:**  
+1. **Automatic Release Workflow:**
    Merging a pull request **automatically creates a release PR**—no manual steps required.
 
-2. **One-Click Publishing:**  
+2. **One-Click Publishing:**
    Merging the release PR **builds & uploads artifacts** to both **PyPI and GitHub**, and **updates the changelog**.
 
-3. **Zero-setup Development:**  
+3. **Zero-setup Development:**
    Powered by **Astral UV**, your **dev environment & all dependencies are fully managed**—no virtualenv or pip install needed.
 
-4. **Continuous Testing:**  
+4. **Continuous Testing:**
    **Unit tests run automatically** on **every pull request** to catch issues early.
 
-5. **Automated Code Quality:**  
+5. **Automated Code Quality:**
    **Pre-commit hooks** enforce **code quality** and **style validation** before anything merges.
 
-6. **Conventional Commits Required:**  
+6. **Conventional Commits Required:**
    **PR titles must follow [Conventional Commit](https://www.conventionalcommits.org/) standards** for clear, automated changelogs and semantic versioning.
 
 Once the setup is finished, the main entrypoint of this project (`app/main.py:main`) can be called from every computer which has `uv`, via the following command:
