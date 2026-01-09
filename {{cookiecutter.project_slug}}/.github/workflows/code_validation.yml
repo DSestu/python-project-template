@@ -39,3 +39,6 @@ jobs:
 
       - name: Minimize uv cache
         run: uv cache prune --ci
+
+      - name: Run tests
+        run: uv run pytest -m "not exclude_ci" -vrx tests

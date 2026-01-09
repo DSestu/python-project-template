@@ -36,13 +36,28 @@ uvx {{ cookiecutter.project_name }}
 
 Once the setup is finished, the main entrypoint of this project (`app/main.py:main`) can be called from every computer which has `uv`, via the following command:
 
-c
+```bash
+uvx {{ cookiecutter.project_name }}
+```
 
 # Initial setup
 
 > ⚠️ **IMPORTANT SETUP REQUIRED**
 >
 > Some essential configurations for automated releases and PyPI integration require using the GitHub and PyPi web interfaces. Please follow the steps below in your browser to complete the setup.
+
+## Just after the cookiecutter has done his job, create the Github repo
+
+* Repository name: {{ cookiecutter.project_name }}
+* Description: {{ cookiecutter.project_description }}
+
+Got to the local project:
+
+```bash
+git branch -M main
+git remote add origin git@github.com:{{ cookiecutter.author_name }}/{{ cookiecutter.project_name }}.git
+git push -u origin main
+```
 
 ## Enable GH actions to create PR's
 
@@ -55,8 +70,8 @@ To enable automatic Pull Requests from release-please, you'll need to grant GitH
 
 Next steps:
 
-- In your repository's commit history, locate the "Cookiecutter initial commit" and copy its full commit SHA (use the copy icon at the end of the line).
-- Open `release-please-config.json`, find the `bootstrap-sha` field, and replace its value with the SHA you just copied. Commit this change.
+* In your repository's commit history, locate the "Cookiecutter initial commit" and copy its full commit SHA (use the copy icon at the end of the line).
+* Open `release-please-config.json`, find the `bootstrap-sha` field, and replace its value with the SHA you just copied. Commit this change.
 
 Finally, ensure your repository has at least one release tag. Create a release from the first commit and tag it as `0.1.0`.
 
@@ -67,18 +82,29 @@ Finally, ensure your repository has at least one release tag. Create a release f
 To enable publishing to PyPI via GitHub Actions, follow these steps:
 
 1. **Set up GitHub Environment:**
-   - In your GitHub repository, go to **Settings** > **Environments**.
-   - Click **New environment** and name it `pypi`.
+   * In your GitHub repository, go to **Settings** > **Environments**.
+   * Click **New environment** and name it `pypi`.
 
 2. **Configure PyPI Publisher:**
-   - Log in to your [PyPI account](https://pypi.org/).
-   - Go to "Account settings" > "Publishing" and click "Add a new publisher".
-   - Choose "GitHub" as the integration type.
-   - Follow the instructions to link your repository and grant the required permissions.
-   - Select or specify the workflow file as `release_please.yml` (or the workflow you use for releases).
-   - Ensure the environment name (`pypi`) matches exactly—this tells the workflow and PyPI which environment to expect.
+   * Log in to your [PyPI account](https://pypi.org/).
+   * Go to "Account settings" > "Publishing" and click "Add a new publisher".
+   * Choose "GitHub" as the integration type.
+   * Follow the instructions to link your repository and grant the required permissions.
+   * Select or specify the workflow file as `release_please.yml` (or the workflow you use for releases).
+   * Ensure the environment name (`pypi`) matches exactly—this tells the workflow and PyPI which environment to expect.
 
 3. **Verify Package Name Consistency:**
-   - Make sure the package name in your `pyproject.toml` file matches exactly with your project name on PyPI. This is critical for successful publishing.
+   * Make sure the package name in your `pyproject.toml` file matches exactly with your project name on PyPI. This is critical for successful publishing.
 
 By following these steps, you'll enable automated publishing of your package to PyPI whenever a release is created via GitHub Actions.
+
+## Advice
+
+To improve the default pull request workflow experience, update your repository's settings as follows:
+
+1. Go to your repository's **Settings**.
+2. In the sidebar, select **Pull Requests**.
+3. Scroll down to the **Default merge message** section.
+4. For both options, set the default message to **Pull request title**.
+
+This will ensure your merge commits use clear, descriptive titles from pull requests instead of the default text.
