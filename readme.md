@@ -2,6 +2,10 @@
 
 A Python project template has been designed. This repository aims to make the development experience smooth, efficient, and consistent across different machines and time periods.
 
+```bash
+uvx cookiecutter gh:DSestu/python-project-template
+```
+
 - [Python Project Template 🚀](#python-project-template-)
   - [Introduction 🌟](#introduction-)
   - [Core Technologies 🛠️](#core-technologies-️)
@@ -17,7 +21,6 @@ A Python project template has been designed. This repository aims to make the de
     - [Act](#act)
       - [VM Size](#vm-size)
   - [License 📜](#license-)
-
 
 ## Introduction 🌟
 
@@ -53,8 +56,8 @@ The following technologies are leveraged:
 git clone git@github.com:DSestu/python-project-template.git . && rm -rf .git && git init
 ```
 
-3. Enter the project directory
-4. The environment will be set up automatically
+1. Enter the project directory
+2. The environment will be set up automatically
 
 ### Setting up `devenv` & `direnv` 🛠️
 
@@ -103,7 +106,7 @@ You can launch the same script as the container would be by running:
 start
 ```
 
-2. From the container
+1. From the container
 
 The devenv environment has also an embedded container runtime *(colima)* and docker.
 
@@ -115,7 +118,7 @@ You can start the container runtime *(colima)* and the docker image with the fol
 docker_start
 ```
 
-3. Without devenv or docker
+1. Without devenv or docker
 
 The more manual approach is to activate the python environement manually.
 

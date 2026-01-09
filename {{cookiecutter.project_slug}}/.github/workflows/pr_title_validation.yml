@@ -24,5 +24,7 @@ jobs:
             fi
         shell: bash
         env:
+            {% raw -%}
             TITLE: ${{ github.event.pull_request.title }}
+            {% endraw -%}
             PREFIXES: feat|fix|docs|refactor|chore|deps|ci|perf|build|style|test
