@@ -1,6 +1,6 @@
 [project]
-name = "{{ cookiecutter.project_slug }}"
-version = "{{ cookiecutter.version }}"
+name = "{{ cookiecutter.project_name }}"
+version = "0.1.0"
 authors = [
     { name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}" },
 ]
@@ -15,18 +15,18 @@ dependencies = [
 ]
 
 [project.urls]
-Source = "https://github.com/{{ cookiecutter.author_name }}/{{ cookiecutter.project_slug }}"
-Issues = "https://github.com/{{ cookiecutter.author_name }}/{{ cookiecutter.project_slug }}/issues"
-Changelog = "https://github.com/{{ cookiecutter.author_name }}/{{ cookiecutter.project_slug }}/releases"
-License = "https://github.com/{{ cookiecutter.author_name }}/{{ cookiecutter.project_slug }}/blob/main/LICENSE"
+Source = "https://github.com/{{ cookiecutter.author_name }}/{{ cookiecutter.project_name }}"
+Issues = "https://github.com/{{ cookiecutter.author_name }}/{{ cookiecutter.project_name }}/issues"
+Changelog = "https://github.com/{{ cookiecutter.author_name }}/{{ cookiecutter.project_name }}/releases"
+License = "https://github.com/{{ cookiecutter.author_name }}/{{ cookiecutter.project_name }}/blob/main/LICENSE"
 
 
 [project.scripts]
-{{ cookiecutter.project_slug }} = "{{ cookiecutter.app_name }}.main:main"
+{{ cookiecutter.project_name }} = "app.main:main"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["{{ cookiecutter.app_name }}"]
+packages = ["app"]

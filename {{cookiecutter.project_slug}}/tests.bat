@@ -1,1 +1,1 @@
-uv run pytest {{ cookiecutter.app_name }}/tests/
+uv run pytest app/tests/
