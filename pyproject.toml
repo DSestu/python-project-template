@@ -1,5 +1,5 @@
 [project]
-name = "python-project-template_test"
+name = "python-project-template"
 version = "0.1.0"
 description = "A cookiecutter template for Python projects"
 readme = "README.md"
@@ -9,4 +9,3 @@ dependencies = [
     "ruff>=0.6.3",
 ]
 
-[project.urls]
