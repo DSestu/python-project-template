@@ -1,29 +1,84 @@
 # {{ cookiecutter.project_name }} 🚀
 
+## Quick Start: Run the Project with UV
+
+```bash
+uvx {{ cookiecutter.project_name }}
+```
+
+# Project description
+
 {{ cookiecutter.project_description }}
 
-In order to allow automatic PR of release please, you have to give the permissions
+# Template features
 
-for Github actions to create a PR:
+> Please make sure that everything is setup: [See Initial setup section below](#initial-setup)
 
-* Go to repo
-* Settings
-* Actions
-* General
-* (scroll) Workflow permissions
-* Tick "Allow GitHub Actions to create and approve pull requests"
+**✨ Key Features:**
 
-Go to commit history, copy full sha (end of line copy icon) of the first commit "Cookiecutter initial commit". Then, edit "release-please-config.json", the field "bootstrap-sha", replace with the new sha and commit.
+1. **Automatic Release Workflow:**  
+   Merging a pull request **automatically creates a release PR**—no manual steps required.
 
-# You will also need at least one tag. So create a release from the first commit with a tag 0.1.0
+2. **One-Click Publishing:**  
+   Merging the release PR **builds & uploads artifacts** to both **PyPI and GitHub**, and **updates the changelog**.
 
-# Setup publishing
+3. **Zero-setup Development:**  
+   Powered by **Astral UV**, your **dev environment & all dependencies are fully managed**—no virtualenv or pip install needed.
 
-go to github repo settings, environments, and create an environment named "pypi".
+4. **Continuous Testing:**  
+   **Unit tests run automatically** on **every pull request** to catch issues early.
 
-Then, go to your pypi account: publication, add a new publisher, github.
+5. **Automated Code Quality:**  
+   **Pre-commit hooks** enforce **code quality** and **style validation** before anything merges.
 
-Use release_please.yml as workflow file.
-Add the necessary informations depending of the project, and ensure env name "pypi"
+6. **Conventional Commits Required:**  
+   **PR titles must follow [Conventional Commit](https://www.conventionalcommits.org/) standards** for clear, automated changelogs and semantic versioning.
 
-# The package name have to match exactly the one on pypi
+Once the setup is finished, the main entrypoint of this project (`app/main.py:main`) can be called from every computer which has `uv`, via the following command:
+
+c
+
+# Initial setup
+
+> ⚠️ **IMPORTANT SETUP REQUIRED**
+>
+> Some essential configurations for automated releases and PyPI integration require using the GitHub and PyPi web interfaces. Please follow the steps below in your browser to complete the setup.
+
+## Enable GH actions to create PR's
+
+To enable automatic Pull Requests from release-please, you'll need to grant GitHub Actions permission to create and approve pull requests:
+
+1. Navigate to your repository on GitHub.
+2. Go to **Settings** > **Actions** > **General**.
+3. Scroll down to **Workflow permissions**.
+4. Select **Allow GitHub Actions to create and approve pull requests**.
+
+Next steps:
+
+- In your repository's commit history, locate the "Cookiecutter initial commit" and copy its full commit SHA (use the copy icon at the end of the line).
+- Open `release-please-config.json`, find the `bootstrap-sha` field, and replace its value with the SHA you just copied. Commit this change.
+
+Finally, ensure your repository has at least one release tag. Create a release from the first commit and tag it as `0.1.0`.
+
+## Setup publishing to Pypi
+
+## Configure Publishing to PyPI
+
+To enable publishing to PyPI via GitHub Actions, follow these steps:
+
+1. **Set up GitHub Environment:**
+   - In your GitHub repository, go to **Settings** > **Environments**.
+   - Click **New environment** and name it `pypi`.
+
+2. **Configure PyPI Publisher:**
+   - Log in to your [PyPI account](https://pypi.org/).
+   - Go to "Account settings" > "Publishing" and click "Add a new publisher".
+   - Choose "GitHub" as the integration type.
+   - Follow the instructions to link your repository and grant the required permissions.
+   - Select or specify the workflow file as `release_please.yml` (or the workflow you use for releases).
+   - Ensure the environment name (`pypi`) matches exactly—this tells the workflow and PyPI which environment to expect.
+
+3. **Verify Package Name Consistency:**
+   - Make sure the package name in your `pyproject.toml` file matches exactly with your project name on PyPI. This is critical for successful publishing.
+
+By following these steps, you'll enable automated publishing of your package to PyPI whenever a release is created via GitHub Actions.
