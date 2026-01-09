@@ -1,5 +1,38 @@
 # Changelog
 
+## [0.4.0](https://github.com/DSestu/python-project-template/compare/v0.3.11...v0.4.0) (2026-01-09)
+
+
+### New features
+
+* add main application logic and hello world functionality with tests ([4e88866](https://github.com/DSestu/python-project-template/commit/4e88866c36ea3dfb3838b93aa6f979939a2b14e2))
+* dynamically_change_cookiecutter_defaults ([#32](https://github.com/DSestu/python-project-template/issues/32)) ([7a9224b](https://github.com/DSestu/python-project-template/commit/7a9224b73ea2b3213e60573d57a52f6653d5e226))
+
+
+### Miscellaneous Chores
+
+* add release-please manifest and update code validation workflow ([9b6ef7e](https://github.com/DSestu/python-project-template/commit/9b6ef7edf97c86881109a5224ad5afe9f0bcdc93))
+* clean up project files by removing trailing newlines in configuration and README files for consistency ([3aef230](https://github.com/DSestu/python-project-template/commit/3aef230d19bffc230e6805e6433e704ef423f07e))
+* enhance release workflow by adding checkout step and ensuring full fetch depth ([f207a68](https://github.com/DSestu/python-project-template/commit/f207a689701c93ed4d3b455583542f23112660fe))
+* refine pre-commit configuration to exclude specific project files from hooks for improved consistency ([0e65ffb](https://github.com/DSestu/python-project-template/commit/0e65ffb5277ca21659ad0b9a302e73bd493de5b9))
+* remove ruff pre-commit hooks from configuration to streamline setup and avoid conflicts with project files ([2ab2aa3](https://github.com/DSestu/python-project-template/commit/2ab2aa35e9a57a591654059c6bdd3695c0fdbf84))
+* rename project_name in cookiecutter.json to "python-project-template" ([13ac6a5](https://github.com/DSestu/python-project-template/commit/13ac6a5e3494e1e9d6f8a0964193b3cb2d7939bd))
+* update configuration files and README for consistency and clarity ([c07acea](https://github.com/DSestu/python-project-template/commit/c07acea40ad1824dd8c1d13e5307a288e31bf1bc))
+* update cookiecutter.json and pyproject.toml for project name consistency, enhance README with additional setup instructions, and remove outdated TEMPLATE_STRUCTURE.md ([a70704b](https://github.com/DSestu/python-project-template/commit/a70704b5dda6d91cdbff026e75c7259d70d226da))
+* update pre-commit configuration to exclude GitHub workflows from specific hooks for improved consistency ([1f29c03](https://github.com/DSestu/python-project-template/commit/1f29c03d854270ce198dad4169baabfba1400be2))
+* update project name in pyproject.toml and simplify README content for clarity ([1c7fda7](https://github.com/DSestu/python-project-template/commit/1c7fda7077f5ed82ac7f48d65ee9fc53d7034d34))
+* update pyproject.toml to include authors and project URLs ([3f6a8ce](https://github.com/DSestu/python-project-template/commit/3f6a8cefc978304dcf4203c36b0f9c628e5cde19))
+
+
+### Documentation
+
+* add section on easy code quality checks to README, including instructions for activating, deactivating, and running pre-commit hooks ([fb832da](https://github.com/DSestu/python-project-template/commit/fb832da2d0d3beb63e10ffdf3630270bfd980ae4))
+* enhance README with GitHub repository setup instructions and improve formatting for clarity; update code validation workflow to include test execution ([aa1465f](https://github.com/DSestu/python-project-template/commit/aa1465fecabef11c235952a22a97f0065b2a0f51))
+* enhance README with installation instructions for uv and cookiecutter usage ([8bad087](https://github.com/DSestu/python-project-template/commit/8bad087b047990781400b9180b5edabdead58475))
+* expand README with quick start guide, detailed setup instructions for automated releases, and PyPI publishing configuration ([e46d439](https://github.com/DSestu/python-project-template/commit/e46d4396452ec7d5d67ba50c46fe718d7b30a2be))
+* update README to clarify project goals, features, and usage instructions for the CookieCutter template ([d874702](https://github.com/DSestu/python-project-template/commit/d8747026e8592f83778c61fef1a06054a3b10ec4))
+* update README to improve formatting of key features section for clarity and consistency ([57d9f02](https://github.com/DSestu/python-project-template/commit/57d9f0236991211888a9ca1e786eab1d4c228368))
+
 ## [0.3.11](https://github.com/DSestu/python-project-template/compare/v0.3.10...v0.3.11) (2026-01-09)
 
 
