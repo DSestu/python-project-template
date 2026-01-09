@@ -39,7 +39,11 @@ jobs:
           echo "$HOME/.cargo/bin" >> $GITHUB_PATH
 
       - name: Change package version
-        run: uv version "${{ needs.release-please.outputs.tag_name }}"
+        run: |
+          TAG="${{ needs.release-please.outputs.tag_name }}"
+          # Remove 'v' prefix if present
+          VERSION=${TAG#v}
+          uv version "$VERSION"
 
       - name: Build wheels
         run: uv build
@@ -53,13 +57,22 @@ jobs:
             dist/*.tar.gz
 
   publish-to-pypi:
-    needs: build-wheels
-    if: needs.build-wheels.outputs.release_created == 'true'
+    needs: [release-please, build-wheels]
+    if: needs.release-please.outputs.release_created == 'true'
     runs-on: ubuntu-latest
     environment: pypi
     permissions:
       id-token: write
       contents: read
     steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.release-please.outputs.tag_name }}
+
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
       - name: Publish to PyPI
         run: uv publish
