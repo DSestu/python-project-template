@@ -12,11 +12,6 @@ permissions:
 jobs:
   release-please:
     runs-on: ubuntu-latest
-    environment: pypi
-    permissions:
-      id-token: write
-      contents: write
-
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
       tag_name: ${{ steps.release.outputs.tag_name }}
@@ -57,5 +52,14 @@ jobs:
             dist/*.whl
             dist/*.tar.gz
 
+  publish-to-pypi:
+    needs: build-wheels
+    if: needs.build-wheels.outputs.release_created == 'true'
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+      contents: read
+    steps:
       - name: Publish to PyPI
         run: uv publish
