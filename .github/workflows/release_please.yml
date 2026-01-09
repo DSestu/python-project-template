@@ -38,9 +38,11 @@ jobs:
           curl -LsSf https://astral.sh/uv/install.sh | sh
           echo "$HOME/.cargo/bin" >> $GITHUB_PATH
 
+      - name: Change package version
+        run: uv version "${{ needs.release-please.outputs.tag_name }}"
+
       - name: Build wheels
-        run: |
-          uv build
+        run: uv build
 
       - name: Upload wheels to GitHub Release
         uses: softprops/action-gh-release@v2
