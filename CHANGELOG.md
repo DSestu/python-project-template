@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.4.1](https://github.com/DSestu/python-project-template/compare/v0.4.0...v0.4.1) (2026-01-09)
+
+
+### Miscellaneous Chores
+
+* change variable name of projet folder ([ecbb5cd](https://github.com/DSestu/python-project-template/commit/ecbb5cd803d76e01b77bc79a8f11cfb40d401794))
+* update dependencies in pyproject.toml and implement Entrypoint class in main.py for command handling ([7a10150](https://github.com/DSestu/python-project-template/commit/7a101509383cb3392862e037e7ddd7464fdd22dd))
+* update release workflow to include publishing to PyPI ([7b20adb](https://github.com/DSestu/python-project-template/commit/7b20adb344289c67f7112a3467be462ffb59198c))
+
+
+### Documentation
+
+* add comprehensive README with project overview, setup instructions, and key features ([1136373](https://github.com/DSestu/python-project-template/commit/1136373ac4946f7d7eea84fc418eca51eed0b59f))
+* add important note about PyPI project name conflicts to README; update README in project template with release process clarification; adjust test directory in CI workflow ([4423012](https://github.com/DSestu/python-project-template/commit/4423012c011d84d0de00d20523da4fa567331ae0))
+* correct typos in README and update pull request workflow instructions for clarity; add release-please configuration file ([c77252a](https://github.com/DSestu/python-project-template/commit/c77252adef4eaeacf05edf1334dbc8c0b43ff503))
+
 ## [0.4.0](https://github.com/DSestu/python-project-template/compare/v0.3.11...v0.4.0) (2026-01-09)
 
 
