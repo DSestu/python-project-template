@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.10](https://github.com/DSestu/python-project-template/compare/v0.3.9...v0.3.10) (2026-01-09)
+
+
+### Miscellaneous Chores
+
+* update project name in pyproject.toml to "python-project-template_test" ([85d293f](https://github.com/DSestu/python-project-template/commit/85d293f700d9618e3cb8e248ad96ffe0b0da38da))
+* update project name in pyproject.toml to "python-project-template_test" ([#28](https://github.com/DSestu/python-project-template/issues/28)) ([a20883f](https://github.com/DSestu/python-project-template/commit/a20883f47f070b5a09a586b54629ee3127eb5fea))
+
 ## [0.3.9](https://github.com/DSestu/python-project-template/compare/v0.3.8...v0.3.9) (2026-01-09)
 
 
