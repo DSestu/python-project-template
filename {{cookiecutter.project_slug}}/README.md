@@ -13,12 +13,16 @@ for Github actions to create a PR:
 * (scroll) Workflow permissions
 * Tick "Allow GitHub Actions to create and approve pull requests"
 
+# You will also need at least one tag. So create a release from the first commit with a tag 0.1.0
+
 # Setup publishing
 
 go to github repo settings, environments, and create an environment named "pypi".
 
 Then, go to your pypi account: publication, add a new publisher, github.
 Add the necessary informations depending of the project, and ensure env name "pypi"
+
+# The package name have to match exactly the one on pypi
 
 * [{{ cookiecutter.project_name }} 🚀](#{{ cookiecutter.project_slug }}-)
   * [Introduction 🌟](#introduction-)
