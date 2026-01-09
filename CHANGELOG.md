@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.6](https://github.com/DSestu/python-project-template/compare/v0.3.5...v0.3.6) (2026-01-09)
+
+
+### Miscellaneous Chores
+
+* update release workflow permissions to include id-token ([100ade7](https://github.com/DSestu/python-project-template/commit/100ade722edbc733d2c8c4cd3be1252473dbd0c1))
+* update release workflow permissions to include id-token ([#18](https://github.com/DSestu/python-project-template/issues/18)) ([0d447df](https://github.com/DSestu/python-project-template/commit/0d447df5241b81217faf8548cfcd166a885cf495))
+
 ## [0.3.5](https://github.com/DSestu/python-project-template/compare/v0.3.4...v0.3.5) (2026-01-09)
 
 
