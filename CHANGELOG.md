@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.2](https://github.com/DSestu/python-project-template/compare/v0.3.1...v0.3.2) (2026-01-09)
+
+
+### Bug fixes
+
+* update package version from tag ([bddc2f8](https://github.com/DSestu/python-project-template/commit/bddc2f891f6eea85ac58dd6bbfeda9376e81b856))
+* update package version from tag ([7d353cc](https://github.com/DSestu/python-project-template/commit/7d353cc389ecd3ac2f247efe7ad2cbb3d84e3a67))
+
 ## [0.3.1](https://github.com/DSestu/python-project-template/compare/v0.3.0...v0.3.1) (2026-01-09)
 
 
