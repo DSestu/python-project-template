@@ -2,22 +2,32 @@
 
 {{ cookiecutter.project_description }}
 
-- [{{ cookiecutter.project_name }} 🚀](#{{ cookiecutter.project_slug }}-)
-  - [Introduction 🌟](#introduction-)
-  - [Core Technologies 🛠️](#core-technologies-️)
-  - [Key Features ✨](#key-features-)
-  - [Getting Started 🚀](#getting-started-)
-    - [Setting up `devenv` \& `direnv` 🛠️](#setting-up-devenv--direnv-️)
-  - [Notes](#notes)
-    - [Multiple ways to use the environment](#multiple-ways-to-use-the-environment)
-    - [Integrated devenv commands](#integrated-devenv-commands)
-    - [Python environment management 💡](#python-environment-management-)
-      - [Adding/removing packages](#addingremoving-packages)
-      - [Environment synchronization](#environment-synchronization)
-    - [Act](#act)
-      - [VM Size](#vm-size)
-  - [License 📜](#license-)
+In order to allow automatic PR of release please, you have to give the permissions
 
+for Github actions to create a PR:
+
+* Go to repo
+* Settings
+* Actions
+* General
+* (scroll) Workflow permissions
+* Tick "Allow GitHub Actions to create and approve pull requests"
+
+* [{{ cookiecutter.project_name }} 🚀](#{{ cookiecutter.project_slug }}-)
+  * [Introduction 🌟](#introduction-)
+  * [Core Technologies 🛠️](#core-technologies-️)
+  * [Key Features ✨](#key-features-)
+  * [Getting Started 🚀](#getting-started-)
+    * [Setting up `devenv` \& `direnv` 🛠️](#setting-up-devenv--direnv-️)
+  * [Notes](#notes)
+    * [Multiple ways to use the environment](#multiple-ways-to-use-the-environment)
+    * [Integrated devenv commands](#integrated-devenv-commands)
+    * [Python environment management 💡](#python-environment-management-)
+      * [Adding/removing packages](#addingremoving-packages)
+      * [Environment synchronization](#environment-synchronization)
+    * [Act](#act)
+      * [VM Size](#vm-size)
+  * [License 📜](#license-)
 
 ## Introduction 🌟
 
@@ -27,22 +37,22 @@ The template is built with a focus on minimal manual interaction for environment
 
 The following technologies are leveraged:
 
-- **devenv / direnv**: Orchestrates the macro development environment
-- **docker**: Enables project containerization
-- **colima**: Facilitates local Docker containerization
-- **uv**: Manages Python environments with Rust-based efficiency
-- **act**: Runs GitHub Actions locally in a compact virtual machine
+* **devenv / direnv**: Orchestrates the macro development environment
+* **docker**: Enables project containerization
+* **colima**: Facilitates local Docker containerization
+* **uv**: Manages Python environments with Rust-based efficiency
+* **act**: Runs GitHub Actions locally in a compact virtual machine
 
 ## Key Features ✨
 
-- **Auto-sync Packages** 🔄: `uv sync` automatically manages package additions or removals
-- **Auto-activate Environments** 🌈: Seamless environment activation with devenv + direnv
-- **Docker Ready** 🐳: Projects can be run in a container with ease
-- **Local Isolation** 🏠: Projects can be executed in a local isolated environment
-- **Local GitHub Actions** 🚀: Workflows can be tested before pushing with `act`
-- **Testing Suite** 🧪: Preconfigured with Pytest and GitHub Actions
-- **Code Formatting** 🧹: Code cleanliness is maintained with Ruff
-- **Automatic pre-commit linting** 🔗: Various pre-commit hooks automatically installed
+* **Auto-sync Packages** 🔄: `uv sync` automatically manages package additions or removals
+* **Auto-activate Environments** 🌈: Seamless environment activation with devenv + direnv
+* **Docker Ready** 🐳: Projects can be run in a container with ease
+* **Local Isolation** 🏠: Projects can be executed in a local isolated environment
+* **Local GitHub Actions** 🚀: Workflows can be tested before pushing with `act`
+* **Testing Suite** 🧪: Preconfigured with Pytest and GitHub Actions
+* **Code Formatting** 🧹: Code cleanliness is maintained with Ruff
+* **Automatic pre-commit linting** 🔗: Various pre-commit hooks automatically installed
 
 ## Getting Started 🚀
 
@@ -53,14 +63,14 @@ The following technologies are leveraged:
 git clone <your-repo-url> . && rm -rf .git && git init
 ```
 
-3. Enter the project directory
-4. The environment will be set up automatically
+1. Enter the project directory
+2. The environment will be set up automatically
 
 ### Setting up `devenv` & `direnv` 🛠️
 
 For this project, `devenv` is required, and `direnv` is highly recommended for automatic environment activation when entering the project directory. 🚀
 
-- [**Devenv** can be installed](https://devenv.sh/getting-started/#installation) following the official guide.
+* [**Devenv** can be installed](https://devenv.sh/getting-started/#installation) following the official guide.
 
 To install `direnv`, the following command can be used:
 
@@ -68,9 +78,9 @@ To install `direnv`, the following command can be used:
 nix-env -i direnv
 ```
 
-- [**Direnv** installation instructions](https://direnv.net/docs/installation.html) are available for various systems.
+* [**Direnv** installation instructions](https://direnv.net/docs/installation.html) are available for various systems.
 
-- [**Direnv** hook installation](https://direnv.net/docs/hook.html) is necessary for proper functionality.
+* [**Direnv** hook installation](https://direnv.net/docs/hook.html) is necessary for proper functionality.
 
 To complete the setup, the following lines should be added to the end of your `.zshrc` file:
 
@@ -103,7 +113,7 @@ You can launch the same script as the container would be by running:
 start
 ```
 
-2. From the container
+1. From the container
 
 The devenv environment has also an embedded container runtime *(colima)* and docker.
 
@@ -115,7 +125,7 @@ You can start the container runtime *(colima)* and the docker image with the fol
 docker_start
 ```
 
-3. Without devenv or docker
+1. Without devenv or docker
 
 The more manual approach is to activate the python environement manually.
 
@@ -132,12 +142,12 @@ uv sync
 
 ### Integrated devenv commands
 
-- start: run the ./start.sh script that is also launched when the container is started
-- prune: remove the python environment, reinstall it from scratch, activates it, and install precommit hooks
-- lint: run precommit hooks on all files
-- gdiff: print rich git diff in terminal
-- test: run pytest
-- itest: run integration tests
+* start: run the ./start.sh script that is also launched when the container is started
+* prune: remove the python environment, reinstall it from scratch, activates it, and install precommit hooks
+* lint: run precommit hooks on all files
+* gdiff: print rich git diff in terminal
+* test: run pytest
+* itest: run integration tests
 
 ### Python environment management 💡
 
