@@ -63,6 +63,8 @@
     }
   ],
   "packages": {
-    ".": {}
+    ".": {
+      "version-file": "pyproject.toml"
+    }
   }
 }

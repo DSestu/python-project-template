@@ -46,4 +46,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ needs.release-please.outputs.tag_name }}
-          files: dist/*
+          files: |
+            dist/*.whl
+            dist/*.tar.gz
