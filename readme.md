@@ -6,6 +6,11 @@ This repository provides a CookieCutter template designed for rapid creation of 
 uvx cookiecutter gh:DSestu/python-project-template
 ```
 
+> ⚠️ **Important Note**
+>
+> Before proceeding, **make sure your new project name does _not_ already exist on PyPI**.  
+> The project name directly determines your final package name on PyPI, and any naming conflict will cause build/publishing failures.
+
 ## Overview
 
 - **Goals:**

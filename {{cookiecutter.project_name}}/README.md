@@ -98,6 +98,8 @@ Next steps:
 
 Finally, ensure your repository has at least one release tag. Create a release from the first commit and tag it as `0.1.0`.
 
+> The release please will be triggered after the first PR merge.
+
 ## Setup publishing to Pypi
 
 ## Configure Publishing to PyPI
