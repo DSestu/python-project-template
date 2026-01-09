@@ -49,10 +49,18 @@ uvx {{ cookiecutter.project_name }}
      uv run pre-commit run --all-files
      ```
 
+     * *(the command is in `./precommit.sh`/ `./precommit.bat`)*
+
 Once the setup is finished, the main entrypoint of this project (`app/main.py:main`) can be called from every computer which has `uv`, via the following command:
 
 ```bash
 uvx {{ cookiecutter.project_name }}
+```
+
+It can also be called locally by calling:
+
+```bash
+uvx LOCAL_PATH/{{ cookiecutter.project_name }}
 ```
 
 # Initial setup
