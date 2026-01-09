@@ -1,5 +1,5 @@
 [project]
-name = "python-project-template"
+name = "python-project-template_test"
 version = "0.1.0"
 description = "A cookiecutter template for Python projects"
 readme = "README.md"
