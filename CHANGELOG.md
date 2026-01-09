@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.11](https://github.com/DSestu/python-project-template/compare/v0.3.10...v0.3.11) (2026-01-09)
+
+
+### Miscellaneous Chores
+
+* update pre-commit configuration to exclude GitHub workflows and enhance release workflow with version change and publishing steps ([3d27e21](https://github.com/DSestu/python-project-template/commit/3d27e21e2f83eca6f879b2c666b8d13436e3076c))
+
 ## [0.3.10](https://github.com/DSestu/python-project-template/compare/v0.3.9...v0.3.10) (2026-01-09)
 
 
