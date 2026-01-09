@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.7](https://github.com/DSestu/python-project-template/compare/v0.3.6...v0.3.7) (2026-01-09)
+
+
+### Miscellaneous Chores
+
+* refactor release workflow to add separate job for publishing to PyPI ([b4a5c12](https://github.com/DSestu/python-project-template/commit/b4a5c12c2788892b1581e3f57047a42aa28a2315))
+* refactor release workflow to add separate job for publishing to PyPI ([#22](https://github.com/DSestu/python-project-template/issues/22)) ([b5dae30](https://github.com/DSestu/python-project-template/commit/b5dae30b4f57e01c28b5ba731d3bf05f55757e4a))
+* update release workflow permissions to allow write access for contents ([329e234](https://github.com/DSestu/python-project-template/commit/329e23422cf00ba26bb0fb5602ac1cee2eeef5ba))
+* update release workflow permissions to allow write access for contents ([#21](https://github.com/DSestu/python-project-template/issues/21)) ([a9ba9f4](https://github.com/DSestu/python-project-template/commit/a9ba9f4680f17100fe7dbe36da0e37bc72a63b8b))
+* update release workflow to include environment and permissions for PyPI publishing ([3f7d7ef](https://github.com/DSestu/python-project-template/commit/3f7d7ef806f1a2c8aef23ade6c216d80410238db))
+* update release workflow to include environment and permissions for PyPI publishing ([#20](https://github.com/DSestu/python-project-template/issues/20)) ([177d3b8](https://github.com/DSestu/python-project-template/commit/177d3b8d5de033d5c618712057fc146d9581a381))
+
 ## [0.3.6](https://github.com/DSestu/python-project-template/compare/v0.3.5...v0.3.6) (2026-01-09)
 
 
