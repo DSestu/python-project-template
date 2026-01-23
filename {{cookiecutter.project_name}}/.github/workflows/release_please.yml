@@ -28,6 +28,7 @@ jobs:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
 
+{% if cookiecutter.build_wheel_on_release == 'y' %}
   build-wheels:
     needs: release-please
     if: needs.release-please.outputs.release_created == 'true'
@@ -64,7 +65,9 @@ jobs:
           files: |
             dist/*.whl
             dist/*.tar.gz
+{% endif %}
 
+{% if cookiecutter.use_pypi_release_workflow == 'y' %}
   publish-to-pypi:
     needs: [release-please, build-wheels]
     if: needs.release-please.outputs.release_created == 'true'
@@ -95,3 +98,4 @@ jobs:
 
       - name: Publish to PyPI
         run: uv publish
+{% endif %}

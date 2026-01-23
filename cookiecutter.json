@@ -3,6 +3,8 @@
   "project_description": "A Python project template with testing, development tools, and pre-commit hooks",
   "author_name": "Your Github username",
   "author_email": "Your Github email",
+  "use_pypi_release_workflow": "y/n",
+  "build_wheel_on_release": "y/n",
   "python_version_min": "3.11",
   "python_version_max": "3.12",
   "license": "MIT",
