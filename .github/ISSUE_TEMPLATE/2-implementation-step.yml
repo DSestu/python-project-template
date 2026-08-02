@@ -1,0 +1,63 @@
+name: "🧩 Implementation Step"
+description: "A single, concrete implementation task (e.g. 'Implement the data source schema')."
+title: "[Task]: "
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A **small, self-contained unit of work** that can be picked up and finished in one go.
+        If it needs multiple sub-tasks or has broad product implications, open a
+        **Product Feature Scope** instead and link back to it.
+
+  - type: input
+    id: summary
+    attributes:
+      label: What to build
+      description: One line — the concrete thing to implement.
+      placeholder: "Implement the data source schema"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description
+      description: A few sentences on what this task involves.
+      placeholder: |
+        Define a typed schema (e.g. a pydantic model) representing the core data object,
+        with its fields and validation rules.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it is necessary
+      description: What does this unblock or enable? What breaks or stays painful without it?
+      placeholder: |
+        The code currently passes around loose dicts, so field typos surface only at
+        runtime. A schema gives one validated shape for the rest of the pipeline to share.
+    validations:
+      required: true
+
+  - type: textarea
+    id: fit
+    attributes:
+      label: How it fits the overall scope
+      description: Where does this sit in the bigger picture? Link the parent feature/epic if any.
+      placeholder: |
+        First step of #<feature-issue>. Downstream tasks will consume this schema.
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How we know this task is done.
+      value: |
+        - [ ]
+        - [ ] Covered by a test
+    validations:
+      required: true
