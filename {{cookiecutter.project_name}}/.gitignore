@@ -208,10 +208,7 @@ terraform.rc
 .terraform.lock.hcl
 
 # Devenv
-.devenv*
 micromamba
-!.envrc
-.direnv
 
 # Pre-commit hooks
 .pre-commit
