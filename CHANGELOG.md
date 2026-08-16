@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.2](https://github.com/DSestu/python-project-template/compare/v0.4.1...v0.4.2) (2026-08-16)
+
+
+### Miscellaneous Chores
+
+* enhance cookiecutter template with options for PyPI release workflow and wheel building ([8fdfbf0](https://github.com/DSestu/python-project-template/commit/8fdfbf06078bdd1bb941463787549028406a9580))
+* refine cookiecutter template for improved PyPI release process and wheel generation ([a1bf3ba](https://github.com/DSestu/python-project-template/commit/a1bf3baf753e8bb47cd5d11082f30d7e726be27c))
+* update GitHub Actions workflows to use latest action versions for checkout, cache, release-please, and GitHub release ([45c7606](https://github.com/DSestu/python-project-template/commit/45c760638a37d03076739e0c9f3b635f7732fe29))
+
 ## [0.4.1](https://github.com/DSestu/python-project-template/compare/v0.4.0...v0.4.1) (2026-01-09)
 
 
